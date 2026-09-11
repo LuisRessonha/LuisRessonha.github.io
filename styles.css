@@ -1,12 +1,15 @@
 :root {
-	--paper: #f5f0e8;
-	--ink: #17211f;
-	--muted: #66706c;
-	--line: #d8d2c8;
-	--accent: #e86342;
-	--accent-dark: #b8442b;
-	--teal: #1f7770;
-	--soft-teal: #d7e7df;
+	--paper: #f4f7fb;
+	--ink: #10243d;
+	--muted: #5f6f82;
+	--line: #d5dfeb;
+	--accent: #285f9f;
+	--accent-dark: #194777;
+	--soft-accent: #e7eff8;
+	--content-width: 1080px;
+	--gutter: 2rem;
+	--section-space: 5rem;
+	--font-mono: "DM Mono", monospace;
 	--serif: Georgia, "Times New Roman", serif;
 }
 
@@ -40,14 +43,18 @@ a {
 }
 .site-header,
 .site-footer {
-	max-width: 1180px;
+	max-width: var(--content-width);
 	margin: 0 auto;
-	padding: 1.4rem 2rem;
+	padding: 1.4rem var(--gutter);
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
 }
 .site-header {
+	position: sticky;
+	top: 0;
+	z-index: 5;
+	background: var(--paper);
 	border-bottom: 1px solid var(--line);
 }
 .brand {
@@ -66,9 +73,7 @@ a {
 	place-items: center;
 	background: var(--accent);
 	color: white;
-	font:
-		500 0.7rem "DM Mono",
-		monospace;
+	font: 500 0.7rem var(--font-mono);
 }
 .main-nav {
 	display: flex;
@@ -99,10 +104,10 @@ main {
 	overflow: hidden;
 }
 .hero {
-	max-width: 1180px;
-	min-height: 610px;
+	max-width: var(--content-width);
+	min-height: 540px;
 	margin: 0 auto;
-	padding: 7rem 2rem 6rem;
+	padding: 6rem var(--gutter) var(--section-space);
 	display: grid;
 	grid-template-columns: minmax(0, 1.45fr) minmax(220px, 0.55fr);
 	align-items: end;
@@ -111,19 +116,26 @@ main {
 .hero-copy {
 	max-width: 780px;
 }
+.site-notice {
+	max-width: 32rem;
+	margin-bottom: 2.5rem;
+	padding: 0.75rem 1rem;
+	border-left: 3px solid var(--accent);
+	background: var(--soft-accent);
+	color: var(--accent-dark);
+	font-size: 0.82rem;
+	font-weight: 700;
+}
 .eyebrow,
 .section-kicker,
-.note-label,
 .card-number,
 .now-icon {
-	font:
-		500 0.68rem "DM Mono",
-		monospace;
+	font: 500 0.68rem var(--font-mono);
 	letter-spacing: 0.08em;
 	text-transform: uppercase;
 }
 .eyebrow {
-	color: var(--teal);
+	color: var(--accent);
 	display: flex;
 	align-items: center;
 	gap: 0.55rem;
@@ -134,7 +146,7 @@ main {
 	height: 0.5rem;
 	border-radius: 50%;
 	background: var(--accent);
-	box-shadow: 0 0 0 0.25rem #f1c3b6;
+	box-shadow: 0 0 0 0.25rem var(--soft-accent);
 }
 h1,
 h2,
@@ -163,6 +175,21 @@ h2 em {
 	max-width: 500px;
 	color: var(--muted);
 	font-size: 1.05rem;
+}
+.home-subtitle {
+	margin: 1.5rem 0;
+}
+.home-status {
+	max-width: 520px;
+	margin: 2rem 0;
+	color: var(--muted);
+	font-size: 0.95rem;
+	line-height: 1.8;
+}
+.home-status a {
+	color: var(--accent);
+	font-weight: 700;
+	text-decoration: none;
 }
 .hero-actions {
 	display: flex;
@@ -218,9 +245,9 @@ h2 em {
 	font-weight: 700;
 }
 .section-rule {
-	max-width: 1180px;
+	max-width: var(--content-width);
 	margin: 0 auto;
-	padding: 6rem 2rem;
+	padding: var(--section-space) var(--gutter);
 	border-top: 1px solid var(--line);
 	display: grid;
 	grid-template-columns: 0.35fr 1fr;
@@ -250,9 +277,6 @@ h2 {
 .intro-body p + p {
 	margin-top: 1.2rem;
 }
-.experience {
-	display: block;
-}
 .experience-content > h2 {
 	max-width: 650px;
 }
@@ -274,7 +298,7 @@ h2 {
 }
 .experience-meta strong {
 	color: var(--accent-dark);
-	font-family: "DM Mono", monospace;
+	font-family: var(--font-mono);
 	font-size: 0.68rem;
 	font-weight: 500;
 	letter-spacing: 0.08em;
@@ -291,9 +315,6 @@ h2 {
 .experience-item p {
 	margin: 0;
 	font-size: 0.88rem;
-}
-.focus {
-	display: block;
 }
 .focus-heading {
 	display: flex;
@@ -315,14 +336,15 @@ h2 {
 	gap: 1rem;
 }
 .focus-card {
-	min-height: 280px;
-	padding: 1.5rem;
-	border-top: 2px solid var(--ink);
-	background: #eee8de;
+	min-height: 250px;
+	padding: 1.4rem 0;
+	border-top: 1px solid var(--ink);
 }
 .focus-card.featured-card {
-	background: var(--soft-teal);
-	border-color: var(--teal);
+	background: var(--soft-accent);
+	border-color: var(--accent);
+	padding-left: 1.4rem;
+	padding-right: 1.4rem;
 }
 .card-number {
 	color: var(--accent-dark);
@@ -365,42 +387,15 @@ h2 {
 	font-size: 1rem;
 }
 .connect {
-	max-width: 1180px;
+	max-width: var(--content-width);
 	margin: 0 auto;
-	padding: 7rem 2rem;
-	background: var(--teal);
-	color: #edf4ee;
-}
-.connect .eyebrow {
-	color: #b9dfce;
+	padding: var(--section-space) var(--gutter);
+	border-top: 1px solid var(--line);
 }
 .connect h2 {
 	max-width: 700px;
 	font-size: clamp(3rem, 7vw, 6.5rem);
 	margin: 1rem 0 2.5rem;
-}
-.connect h2 em {
-	color: #f7c29b;
-}
-.connect-actions {
-	display: flex;
-	align-items: center;
-	gap: 1.5rem;
-}
-.connect-link {
-	color: #edf4ee;
-	font-size: 0.78rem;
-	font-weight: 800;
-	text-decoration: none;
-	border-bottom: 1px solid #edf4ee;
-	padding-bottom: 0.2rem;
-}
-.button-light {
-	background: #f7f1e8;
-	color: var(--ink);
-}
-.button-light:hover {
-	background: #f7c29b;
 }
 .site-footer {
 	color: var(--muted);
@@ -412,19 +407,23 @@ h2 {
 	font-weight: 700;
 }
 .footer-note {
-	font:
-		0.68rem "DM Mono",
-		monospace;
+	font: 0.68rem var(--font-mono);
 }
 body.dark {
-	--paper: #17211f;
-	--ink: #edf4ee;
-	--muted: #a7b4ad;
-	--line: #384844;
-	--soft-teal: #234b48;
+	--paper: #101d2d;
+	--ink: #e7eef8;
+	--muted: #aab8c9;
+	--line: #2b4059;
+	--soft-accent: #1a3551;
 }
 body.dark .focus-card {
-	background: #202c29;
+	background: transparent;
+}
+body.dark .focus-card.featured-card {
+	background: var(--soft-accent);
+}
+body.dark .site-notice {
+	color: var(--ink);
 }
 body.dark .site-header,
 body.dark .site-footer {
@@ -436,7 +435,8 @@ body.dark .theme-toggle {
 @media (max-width: 700px) {
 	.site-header,
 	.site-footer {
-		padding: 1rem 1.2rem;
+		--gutter: 1.2rem;
+		padding: 1rem var(--gutter);
 	}
 	.main-nav {
 		gap: 0.8rem;
@@ -446,7 +446,7 @@ body.dark .theme-toggle {
 	}
 	.hero {
 		min-height: auto;
-		padding: 5rem 1.2rem 5rem;
+		padding: 4rem var(--gutter);
 		display: block;
 	}
 	h1 {
@@ -457,7 +457,7 @@ body.dark .theme-toggle {
 	}
 	.section-rule {
 		display: block;
-		padding: 4rem 1.2rem;
+		padding: 4rem var(--gutter);
 	}
 	.section-kicker {
 		margin-bottom: 2.3rem;
@@ -483,7 +483,12 @@ body.dark .theme-toggle {
 		grid-template-columns: 1fr;
 	}
 	.focus-card {
-		min-height: 220px;
+		min-height: auto;
+		padding: 1.2rem 0;
+	}
+	.focus-card.featured-card {
+		padding-left: 1rem;
+		padding-right: 1rem;
 	}
 	.focus-card h3 {
 		margin-top: 3.5rem;
@@ -492,12 +497,7 @@ body.dark .theme-toggle {
 		margin-bottom: 2.5rem;
 	}
 	.connect {
-		padding: 5rem 1.2rem;
-	}
-	.connect-actions {
-		align-items: flex-start;
-		flex-direction: column;
-		gap: 1.2rem;
+		padding: var(--section-space) var(--gutter);
 	}
 	.footer-note {
 		display: none;
