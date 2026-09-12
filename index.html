@@ -3,52 +3,96 @@
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<meta name="description" content="Luis Ressonha is a software engineer and full-stack developer from Portugal, focused on DevOps, web, mobile, and cloud technologies." />
-		<meta name="theme-color" content="#f4f7fb" />
-		<title>Luis Ressonha</title>
+		<meta name="description" content="Luis Ressonha is a Software Engineer from Portugal specializing in Full-Stack development, DevOps, web, mobile, and cloud infrastructure." />
+		<meta name="theme-color" content="#0b0f19" />
+		<title>Luis Ressonha | Site Under Construction</title>
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+		<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 		<link rel="stylesheet" href="styles.css" />
 		<script src="script.js" defer></script>
 	</head>
 
 	<body>
 		<a class="skip-link" href="#main-content">Skip to content</a>
+
 		<header class="site-header">
-			<a class="brand" href="index.html" aria-label="Luis Ressonha home">
-				<span class="brand-mark">LR</span>
-				<span>Luis Ressonha</span>
-			</a>
-			<nav class="main-nav" aria-label="Main navigation">
-				<a href="portfolio.html">Portfolio</a>
-				<a href="https://github.com/LuisRessonha" target="_blank" rel="noreferrer">GitHub <span aria-hidden="true">↗</span></a>
-				<button class="theme-toggle" type="button" aria-label="Switch to dark mode" aria-pressed="false">
-					<span aria-hidden="true">◐</span>
-				</button>
-			</nav>
+			<div class="header-container">
+				<a class="brand" href="index.html" aria-label="Luis Ressonha home">
+					<span class="brand-badge">LR</span>
+					<span>Luis Ressonha</span>
+				</a>
+				<nav class="main-nav" aria-label="Main navigation">
+					<a href="portfolio.html">Portfolio</a>
+					<a href="https://github.com/LuisRessonha" target="_blank" rel="noreferrer">GitHub ↗</a>
+					<button class="theme-toggle" type="button" aria-label="Switch to dark mode" aria-pressed="false">
+						<span aria-hidden="true">🌙</span>
+					</button>
+				</nav>
+			</div>
 		</header>
 
-		<main id="main-content">
-			<section class="hero" id="top" aria-labelledby="hero-title">
-				<div class="hero-copy">
-					<h1 id="hero-title">Luis Ressonha</h1>
-					<p class="hero-text home-subtitle">Software engineer · Full-stack · DevOps</p>
-					<p class="home-status">
-						<span class="status-dot"></span> <strong>This site is being rebuilt.</strong><br />
-						In the meantime, read more about me on my <a href="portfolio.html">portfolio page</a> or visit my <a href="https://github.com/LuisRessonha" target="_blank" rel="noreferrer">GitHub</a>.
+		<main id="main-content" class="container">
+			<section class="hero" id="top">
+				<div class="hero-content">
+					<div class="status-badge">
+						<span class="status-dot"></span> Site Work In Progress
+					</div>
+					<h1 class="hero-title">
+						Building something <span>new</span>.
+					</h1>
+					<p class="hero-bio">
+						My personal website is currently being rebuilt. In the meantime, you can explore my full background on my portfolio page or check out my code on GitHub.
 					</p>
 					<div class="hero-actions">
-						<a class="button button-primary" href="https://github.com/LuisRessonha" target="_blank" rel="noreferrer">View GitHub <span aria-hidden="true">↗</span></a>
-						<a class="text-link" href="portfolio.html">My work <span aria-hidden="true">↗</span></a>
+						<a class="btn btn-primary" href="portfolio.html">View Portfolio ↗</a>
+						<a class="btn btn-secondary" href="https://github.com/LuisRessonha" target="_blank" rel="noreferrer">GitHub Profile ↗</a>
+					</div>
+				</div>
+
+				<div class="dev-card" aria-label="System Status Card">
+					<div class="dev-card-header">
+						<span class="dot dot-red"></span>
+						<span class="dot dot-yellow"></span>
+						<span class="dot dot-green"></span>
+						<span class="dev-card-title">build_status.json</span>
+					</div>
+					<div class="dev-card-body">
+						<div class="code-line">
+							<span class="code-key">"developer":</span>
+							<span class="code-string">"Luis Ressonha"</span>,
+						</div>
+						<div class="code-line">
+							<span class="code-key">"role":</span>
+							<span class="code-string">"Software Engineer"</span>,
+						</div>
+						<div class="code-line">
+							<span class="code-key">"status":</span>
+							<span class="code-string">"WIP / Rebuilding Homepage"</span>,
+						</div>
+						<div class="code-line">
+							<span class="code-key">"portfolio":</span>
+							<span class="code-string">"<a href="portfolio.html" style="text-decoration: underline; color: var(--primary);">portfolio.html</a>"</span>,
+						</div>
+						<div class="code-line">
+							<span class="code-key">"github":</span>
+							<span class="code-string">"<a href="https://github.com/LuisRessonha" target="_blank" rel="noreferrer" style="text-decoration: underline; color: var(--primary);">@LuisRessonha</a>"</span>
+						</div>
 					</div>
 				</div>
 			</section>
 		</main>
 
 		<footer class="site-footer">
-			<span>© <span id="year"></span> Luis Ressonha</span>
-			<span class="footer-note">Built with care, shaped with AI.</span>
+			<div class="footer-container">
+				<div>
+					© <span id="year"></span> Luis Ressonha · Software Engineer
+				</div>
+				<div class="footer-links">
+					<a href="portfolio.html">Portfolio</a>
+					<a href="https://github.com/LuisRessonha" target="_blank" rel="noreferrer">GitHub ↗</a>
+				</div>
+			</div>
 		</footer>
 	</body>
 </html>

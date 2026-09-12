@@ -3,151 +3,310 @@
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<meta name="description" content="Luis Ressonha is a software engineer and full-stack developer from Portugal, focused on DevOps, web, mobile, and cloud technologies." />
-		<meta name="theme-color" content="#f4f7fb" />
-		<title>Luis Ressonha | Portfolio</title>
+		<meta name="description" content="Luis Ressonha is a Software Engineer from Portugal specializing in Full-Stack development, DevOps, web, mobile, and cloud infrastructure." />
+		<meta name="theme-color" content="#0b0f19" />
+		<title>Luis Ressonha | Portfolio & Resume</title>
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+		<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 		<link rel="stylesheet" href="styles.css" />
 		<script src="script.js" defer></script>
 	</head>
 
 	<body>
 		<a class="skip-link" href="#main-content">Skip to content</a>
+
 		<header class="site-header">
-			<a class="brand" href="index.html" aria-label="Luis Ressonha home">
-				<span class="brand-mark">LR</span>
-				<span>Luis Ressonha</span>
-			</a>
-			<nav class="main-nav" aria-label="Main navigation">
-				<a href="index.html">Home</a>
-				<a href="#about">About</a>
-				<a href="#experience">Experience</a>
-				<a href="#skills">Skills</a>
-				<button class="theme-toggle" type="button" aria-label="Switch to dark mode" aria-pressed="false">
-					<span aria-hidden="true">◐</span>
-				</button>
-			</nav>
+			<div class="header-container">
+				<a class="brand" href="index.html" aria-label="Luis Ressonha home">
+					<span class="brand-badge">LR</span>
+					<span>Luis Ressonha</span>
+				</a>
+				<nav class="main-nav" aria-label="Main navigation">
+					<a href="index.html">Home</a>
+					<a href="#about">About</a>
+					<a href="#skills">Skills</a>
+					<a href="#experience">Experience</a>
+					<a href="#projects">Work</a>
+					<a href="https://github.com/LuisRessonha" target="_blank" rel="noreferrer">GitHub ↗</a>
+					<button class="theme-toggle" type="button" aria-label="Switch to dark mode" aria-pressed="false">
+						<span aria-hidden="true">🌙</span>
+					</button>
+				</nav>
+			</div>
 		</header>
 
-		<main id="main-content">
-			<section class="hero" id="top" aria-labelledby="hero-title">
-				<div class="hero-copy">
-					<p class="site-notice" role="status">Work in progress: this portfolio is still being updated.</p>
-					<p class="eyebrow"><span class="status-dot"></span> Software engineer · DevOps junior</p>
-					<h1 id="hero-title">Full-stack engineering with a <em>practical edge.</em></h1>
-					<p class="hero-text">I'm Luis Ressonha, a software engineer from Portugal working across web, mobile, integrations, and the systems that support them.</p>
+		<main id="main-content" class="container">
+			<section class="hero" id="top">
+				<div class="hero-content">
+					<div class="status-badge">
+						<span class="status-dot"></span> Available for Software & DevOps roles
+					</div>
+					<h1 class="hero-title">
+						Software Engineer building <span>scalable apps</span> & <span>cloud systems</span>.
+					</h1>
+					<p class="hero-bio">
+						I'm Luis Ressonha, a full-stack engineer from Portugal with 4+ years of experience across web platforms, mobile apps, backend APIs, and DevOps automation.
+					</p>
 					<div class="hero-actions">
-						<a class="button button-primary" href="https://github.com/LuisRessonha" target="_blank" rel="noreferrer">View GitHub <span aria-hidden="true">↗</span></a>
-						<a class="text-link" href="#about">More about me <span aria-hidden="true">↓</span></a>
+						<a class="btn btn-primary" href="https://github.com/LuisRessonha" target="_blank" rel="noreferrer">View GitHub ↗</a>
+						<a class="btn btn-secondary" href="#experience">Explore Work ↓</a>
 					</div>
 				</div>
-				<div class="hero-facts" aria-label="Quick facts">
-					<div><span class="fact-label">Based in</span><strong>Portugal</strong></div>
-					<div><span class="fact-label">Experience</span><strong>4+ years</strong></div>
-					<div><span class="fact-label">Focus</span><strong>Cloud &amp; DevOps</strong></div>
-				</div>
-			</section>
 
-			<section class="intro section-rule" id="about" aria-labelledby="about-title">
-				<div class="section-kicker">01 / About</div>
-				<div class="intro-content">
-					<h2 id="about-title">From production features to the infrastructure behind them.</h2>
-					<div class="intro-body">
-						<p>I build and maintain software across frontend, backend, integrations, and delivery. My experience includes retail platforms, mobile applications, university services, and production Agile teams.</p>
-						<p>I am currently deepening my DevOps practice through Azure, Linux, Docker, scripting, and hands-on home lab administration.</p>
+				<div class="dev-card" aria-label="Developer Profile Card">
+					<div class="dev-card-header">
+						<span class="dot dot-red"></span>
+						<span class="dot dot-yellow"></span>
+						<span class="dot dot-green"></span>
+						<span class="dev-card-title">luis_profile.json</span>
 					</div>
-				</div>
-			</section>
-
-			<section class="section-rule" id="experience" aria-labelledby="experience-title">
-				<div class="section-kicker">02 / Experience</div>
-				<div class="experience-content">
-					<h2 id="experience-title">Work that made me <em>broader.</em></h2>
-					<div class="experience-list">
-						<article class="experience-item">
-							<div class="experience-meta"><strong>2022 — now</strong><span>Capgemini · Portugal</span></div>
-							<div><h3>Software Engineer · Full-stack</h3><p>Building and maintaining Salesforce B2C Commerce features for a production retail website, alongside React Native mobile features with TypeScript and Expo.</p></div>
-						</article>
-						<article class="experience-item">
-							<div class="experience-meta"><strong>2021</strong><span>University</span></div>
-							<div><h3>Institutional search platform</h3><p>Developed and deployed a searchable resource platform using Python, Flask, HTML, CSS, JavaScript, structured data, and a database.</p></div>
-						</article>
-						<article class="experience-item">
-							<div class="experience-meta"><strong>2020 — 2021</strong><span>University · Siemens Healthcare</span></div>
-							<div><h3>COVID-19 risk assessment service</h3><p>Created backend logic and templating components with Python, CherryPy, and Jinja2 for a community-facing health workflow.</p></div>
-						</article>
-					</div>
-				</div>
-			</section>
-
-			<section class="section-rule" id="skills" aria-labelledby="focus-title">
-				<div class="section-kicker">03 / Skills</div>
-				<div class="focus-heading">
-					<h2 id="focus-title">Tools for building<br /><em>useful systems.</em></h2>
-					<p>Comfortable moving between application code, APIs, infrastructure, and the delivery process.</p>
-				</div>
-				<div class="focus-grid">
-					<article class="focus-card">
-						<span class="card-number">01</span>
-						<h3>Web &amp; mobile</h3>
-						<p>Salesforce B2C Commerce, React Native, Expo, TypeScript, JavaScript, HTML, CSS, SASS, and SQL.</p>
-					</article>
-					<article class="focus-card featured-card">
-						<span class="card-number">02</span>
-						<h3>Backend &amp; APIs</h3>
-						<p>Python, Flask, CherryPy, Jinja2, REST APIs, JSON, integrations, and maintainable service design.</p>
-					</article>
-					<article class="focus-card">
-						<span class="card-number">03</span>
-						<h3>DevOps foundations</h3>
-						<p>Linux, Docker, Bash, GitHub, Microsoft Azure, scripting, and hands-on administration through a home lab.</p>
-					</article>
-				</div>
-			</section>
-
-			<section class="now section-rule" aria-labelledby="now-title">
-				<div class="section-kicker">04 / Now</div>
-				<div class="now-content">
-					<h2 id="now-title">Moving closer to <em>the platform.</em></h2>
-					<div class="now-list">
-						<div class="now-item">
-							<span class="now-icon">01</span>
-							<div>
-								<h3>DevOps learning</h3>
-								<p>Working through advanced DevOps training and building practical confidence with cloud, containers, and automation.</p>
-							</div>
+					<div class="dev-card-body">
+						<div class="code-line">
+							<span class="code-key">"name":</span>
+							<span class="code-string">"Luis Ressonha"</span>,
 						</div>
-						<div class="now-item">
-							<span class="now-icon">02</span>
-							<div>
-								<h3>Home lab</h3>
-								<p>Maintaining a NAS-based lab with Docker containers to practice Linux administration, networking, and scripting.</p>
-							</div>
+						<div class="code-line">
+							<span class="code-key">"title":</span>
+							<span class="code-string">"Software Engineer"</span>,
 						</div>
-						<div class="now-item">
-							<span class="now-icon">03</span>
-							<div>
-								<h3>Open to opportunities</h3>
-								<p>Interested in backend, cloud, platform, and full-stack problems worth solving with care.</p>
-							</div>
+						<div class="code-line">
+							<span class="code-key">"location":</span>
+							<span class="code-string">"Portugal 🇵🇹"</span>,
+						</div>
+						<div class="code-line">
+							<span class="code-key">"experience":</span>
+							<span class="code-val">"4+ years"</span>,
+						</div>
+						<div class="code-line">
+							<span class="code-key">"focus":</span>
+							<span class="code-val">["Full-Stack", "DevOps", "Cloud"]</span>,
+						</div>
+						<div class="code-line">
+							<span class="code-key">"core_stack":</span>
+							<span class="code-val">["TS", "React Native", "Python", "Docker", "Azure"]</span>
 						</div>
 					</div>
 				</div>
 			</section>
 
-			<section class="connect" aria-labelledby="connect-title">
-				<p class="eyebrow">Find me online</p>
-				<h2 id="connect-title">Let's stay<br /><em>connected.</em></h2>
-				<a class="button button-primary" href="https://github.com/LuisRessonha" target="_blank" rel="noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+			<section class="section" id="about">
+				<div class="section-header">
+					<span class="section-tag">01 / About</span>
+					<h2 class="section-title">End-to-end development & infrastructure</h2>
+				</div>
+				<div class="about-grid">
+					<div>
+						<p>
+							I build software across frontend, backend, integrations, and delivery systems. My experience ranges from production retail e-commerce engines to cross-platform mobile apps and university research tools.
+						</p>
+						<p>
+							Currently, I'm focusing heavily on expanding my DevOps practice through Azure, Linux administration, Docker containerization, and automated deployment workflows.
+						</p>
+					</div>
+					<div class="stat-box">
+						<div>
+							<div class="stat-item-number">4+</div>
+							<div class="stat-item-label">Years Experience</div>
+						</div>
+						<div>
+							<div class="stat-item-number">Full-Stack</div>
+							<div class="stat-item-label">Web & Mobile</div>
+						</div>
+						<div>
+							<div class="stat-item-number">DevOps</div>
+							<div class="stat-item-label">Cloud & Automation</div>
+						</div>
+						<div>
+							<div class="stat-item-number">Portugal</div>
+							<div class="stat-item-label">Location</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="section" id="skills">
+				<div class="section-header">
+					<span class="section-tag">02 / Tech Stack</span>
+					<h2 class="section-title">Skills & Technologies</h2>
+				</div>
+				<div class="skills-grid">
+					<article class="skill-card">
+						<h3><span>💻</span> Frontend & Mobile</h3>
+						<div class="tech-tags">
+							<span class="tag tag-primary">TypeScript</span>
+							<span class="tag tag-primary">React Native</span>
+							<span class="tag tag-primary">Expo</span>
+							<span class="tag">JavaScript</span>
+							<span class="tag">Salesforce B2C</span>
+							<span class="tag">HTML5 / CSS3</span>
+							<span class="tag">SASS</span>
+						</div>
+					</article>
+
+					<article class="skill-card">
+						<h3><span>⚙️</span> Backend & APIs</h3>
+						<div class="tech-tags">
+							<span class="tag tag-primary">Python</span>
+							<span class="tag tag-primary">REST APIs</span>
+							<span class="tag">Flask</span>
+							<span class="tag">CherryPy</span>
+							<span class="tag">Jinja2</span>
+							<span class="tag">JSON Integrations</span>
+							<span class="tag">Node.js</span>
+						</div>
+					</article>
+
+					<article class="skill-card">
+						<h3><span>🚀</span> DevOps & Cloud</h3>
+						<div class="tech-tags">
+							<span class="tag tag-primary">Docker</span>
+							<span class="tag tag-primary">Linux</span>
+							<span class="tag tag-primary">Microsoft Azure</span>
+							<span class="tag">Bash Scripting</span>
+							<span class="tag">Git / GitHub</span>
+							<span class="tag">Home Lab Admin</span>
+							<span class="tag">CI/CD</span>
+						</div>
+					</article>
+
+					<article class="skill-card">
+						<h3><span>🛠️</span> Engineering Practices</h3>
+						<div class="tech-tags">
+							<span class="tag tag-primary">Agile / Scrum</span>
+							<span class="tag">SQL Databases</span>
+							<span class="tag">System Design</span>
+							<span class="tag">Code Reviews</span>
+							<span class="tag">API Integration</span>
+						</div>
+					</article>
+				</div>
+			</section>
+
+			<section class="section" id="experience">
+				<div class="section-header">
+					<span class="section-tag">03 / Experience</span>
+					<h2 class="section-title">Work Experience</h2>
+				</div>
+				<div class="timeline">
+					<article class="timeline-item">
+						<div class="timeline-header">
+							<div>
+								<h3 class="role-title">Software Engineer · Full-Stack</h3>
+								<div class="company-name">Capgemini · Portugal</div>
+							</div>
+							<span class="period-badge">2022 — Present</span>
+						</div>
+						<p class="timeline-body">
+							Developing and supporting Salesforce B2C Commerce retail features for production e-commerce platforms. Concurrently building cross-platform mobile app features using React Native, TypeScript, and Expo within Agile sprint teams.
+						</p>
+						<div class="tech-tags">
+							<span class="tag tag-primary">TypeScript</span>
+							<span class="tag tag-primary">React Native</span>
+							<span class="tag">Expo</span>
+							<span class="tag">Salesforce B2C</span>
+							<span class="tag">Agile</span>
+						</div>
+					</article>
+
+					<article class="timeline-item">
+						<div class="timeline-header">
+							<div>
+								<h3 class="role-title">Full-Stack Engineer</h3>
+								<div class="company-name">Institutional Search Engine Project</div>
+							</div>
+							<span class="period-badge">2021</span>
+						</div>
+						<p class="timeline-body">
+							Built and deployed a searchable resource directory platform using Python, Flask, structured data schemas, database backend, and custom web user interfaces.
+						</p>
+						<div class="tech-tags">
+							<span class="tag tag-primary">Python</span>
+							<span class="tag">Flask</span>
+							<span class="tag">JavaScript</span>
+							<span class="tag">SQL</span>
+							<span class="tag">HTML/CSS</span>
+						</div>
+					</article>
+
+					<article class="timeline-item">
+						<div class="timeline-header">
+							<div>
+								<h3 class="role-title">Backend Developer</h3>
+								<div class="company-name">Siemens Healthcare / University</div>
+							</div>
+							<span class="period-badge">2020 — 2021</span>
+						</div>
+						<p class="timeline-body">
+							Implemented core backend service logic and templating workflows for a community health risk assessment service using Python, CherryPy, and Jinja2.
+						</p>
+						<div class="tech-tags">
+							<span class="tag tag-primary">Python</span>
+							<span class="tag">CherryPy</span>
+							<span class="tag">Jinja2</span>
+							<span class="tag">REST APIs</span>
+						</div>
+					</article>
+				</div>
+			</section>
+
+			<section class="section" id="projects">
+				<div class="section-header">
+					<span class="section-tag">04 / Projects & Focus</span>
+					<h2 class="section-title">Current Initiatives</h2>
+				</div>
+				<div class="projects-grid">
+					<article class="project-card">
+						<div>
+							<h3>DevOps & Cloud Practice</h3>
+							<p>Advancing cloud architecture knowledge on Microsoft Azure, container orchestration with Docker, and shell automation for deployment pipelines.</p>
+						</div>
+						<div class="tech-tags">
+							<span class="tag tag-primary">Docker</span>
+							<span class="tag tag-primary">Azure</span>
+							<span class="tag">Linux</span>
+							<span class="tag">Bash</span>
+						</div>
+					</article>
+
+					<article class="project-card">
+						<div>
+							<h3>Home Lab & Self-Hosting</h3>
+							<p>Operating a NAS-backed home lab running Docker containers to gain practical experience with Linux server administration, networking, and service monitoring.</p>
+						</div>
+						<div class="tech-tags">
+							<span class="tag tag-primary">Home Lab</span>
+							<span class="tag">Docker</span>
+							<span class="tag">Linux Admin</span>
+							<span class="tag">NAS</span>
+						</div>
+					</article>
+
+					<article class="project-card">
+						<div>
+							<h3>Engineering Solutions</h3>
+							<p>Focusing on scalable backend systems, maintainable integrations, clean code, and developer tools built with care.</p>
+						</div>
+						<div class="tech-tags">
+							<span class="tag tag-primary">Full-Stack</span>
+							<span class="tag">System Design</span>
+							<span class="tag">Open Source</span>
+						</div>
+					</article>
+				</div>
 			</section>
 		</main>
 
 		<footer class="site-footer">
-			<span>© <span id="year"></span> Luis Ressonha</span>
-			<span class="footer-note">Built with care, shaped with AI.</span>
-			<a href="#top">Back to top ↑</a>
+			<div class="footer-container">
+				<div>
+					© <span id="year"></span> Luis Ressonha · Software Engineer
+				</div>
+				<div class="footer-links">
+					<a href="https://github.com/LuisRessonha" target="_blank" rel="noreferrer">GitHub ↗</a>
+					<a href="#top">Back to top ↑</a>
+				</div>
+			</div>
 		</footer>
 	</body>
 </html>
