@@ -524,6 +524,12 @@ body.dark .site-header {
 	gap: 1.5rem;
 }
 
+.half-grid {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 1.5rem;
+}
+
 .project-card {
 	background: var(--surface);
 	border: 1px solid var(--border);
@@ -590,6 +596,10 @@ body.dark .site-header {
 	}
 
 	.about-grid {
+		grid-template-columns: 1fr;
+	}
+
+	.half-grid {
 		grid-template-columns: 1fr;
 	}
 
