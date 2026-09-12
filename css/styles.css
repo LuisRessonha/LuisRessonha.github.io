@@ -647,6 +647,13 @@ body.dark .site-header {
 	color: var(--primary);
 }
 
+.footer-note {
+	font-family: var(--font-mono);
+	font-size: 0.78rem;
+	color: var(--text-muted);
+	opacity: 0.85;
+}
+
 /* Responsive */
 @media (max-width: 880px) {
 	.header-container {
