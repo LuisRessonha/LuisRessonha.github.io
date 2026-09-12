@@ -265,9 +265,13 @@ body.dark .site-header {
 .hero-bio {
 	font-size: 1.05rem;
 	color: var(--text-muted);
-	max-width: 540px;
+	/* max-width: 540px; */
 	line-height: 1.6;
 	margin-bottom: 2rem;
+
+	display: flex;
+    flex-direction: column;
+	gap: 0.5rem;
 }
 
 .hero-actions {
