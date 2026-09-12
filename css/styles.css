@@ -508,6 +508,15 @@ body.dark .site-header {
 	font-weight: bold;
 }
 
+.timeline-footer {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 1rem;
+	margin-top: 1rem;
+}
+
 /* Projects & Focus */
 .projects-grid {
 	display: grid;
