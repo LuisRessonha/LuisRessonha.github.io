@@ -654,7 +654,7 @@ body.dark .site-header {
 }
 
 /* Responsive */
-@media (max-width: 880px) {
+@media (max-width: 990px) {
 	.header-container {
 		position: relative;
 		padding: 0.8rem 1rem;
