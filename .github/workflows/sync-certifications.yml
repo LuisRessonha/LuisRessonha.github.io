@@ -5,7 +5,7 @@ on:
     branches:
       - main
     paths:
-      - "training-and-certifications.md"
+      - "data/training-and-certifications.md"
       - "scripts/sync-training-certifications.js"
   workflow_dispatch:
 
@@ -32,10 +32,10 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          if [ -n "$(git status --porcelain portfolio.html)" ]; then
-            git add portfolio.html
-            git commit -m "chore(sync): auto-sync training and certifications to portfolio.html [skip ci]"
+          if [ -n "$(git status --porcelain portfolio/index.html)" ]; then
+            git add portfolio/index.html
+            git commit -m "chore(sync): auto-sync training and certifications to portfolio/index.html [skip ci]"
             git push
           else
-            echo "portfolio.html is already up to date."
+            echo "portfolio/index.html is already up to date."
           fi

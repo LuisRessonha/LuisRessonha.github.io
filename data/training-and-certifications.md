@@ -1,8 +1,8 @@
 # Training and Certifications
 
-Use this file as the editable source for the `Certifications & Training` section in `portfolio.html`.
+Use this file as the editable source for the `Certifications & Training` section in `portfolio/index.html`.
 
-When adding or updating an entry, edit this file and run `node scripts/sync-training-certifications.js` from the repository root. Keep entries ordered with ongoing training first, followed by the most recent completed items.
+When adding or updating an entry, edit this file and run `node scripts/sync-training-certifications.js` from the repository root (or push to GitHub to auto-sync). Keep entries ordered with ongoing training first, followed by the most recent completed items.
 
 ## Ongoing Training
 

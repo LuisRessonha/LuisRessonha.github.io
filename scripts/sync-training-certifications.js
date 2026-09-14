@@ -7,8 +7,8 @@ const path = require("path");
 // Or via npm: npm run sync
 
 const repositoryRoot = path.resolve(__dirname, "..");
-const markdownPath = path.join(repositoryRoot, "training-and-certifications.md");
-const htmlPath = path.join(repositoryRoot, "portfolio.html");
+const markdownPath = path.join(repositoryRoot, "data", "training-and-certifications.md");
+const htmlPath = path.join(repositoryRoot, "portfolio", "index.html");
 const startMarker = "<!-- TRAINING-CERTIFICATIONS:START -->";
 const endMarker = "<!-- TRAINING-CERTIFICATIONS:END -->";
 
@@ -76,7 +76,7 @@ function renderEntry(entry) {
 			? `\t\t\t\t\t\t\t<a class="btn btn-secondary btn-card" href="${escapeHtml(entry.url)}" target="_blank" rel="noopener noreferrer">View Course ↗</a>`
 			: "",
 		entry.certificate
-			? `\t\t\t\t\t\t\t<a class="btn btn-secondary btn-card" href="${escapeHtml(entry.certificate)}" target="_blank" rel="noopener noreferrer">View Certificate ↗</a>`
+			? `\t\t\t\t\t\t\t<a class="btn btn-secondary btn-card" href="${escapeHtml(entry.certificate.startsWith("../") ? entry.certificate : `../${entry.certificate}`)}" target="_blank" rel="noopener noreferrer">View Certificate ↗</a>`
 			: ""
 	].filter(Boolean).join("\n");
 
