@@ -73,10 +73,10 @@ function renderEntry(entry) {
 
 	const actions = [
 		entry.url
-			? `\t\t\t\t\t\t\t<a class="btn btn-secondary btn-card" href="${escapeHtml(entry.url)}" target="_blank" rel="noreferrer">View Course ↗</a>`
+			? `\t\t\t\t\t\t\t<a class="btn btn-secondary btn-card" href="${escapeHtml(entry.url)}" target="_blank" rel="noopener noreferrer">View Course ↗</a>`
 			: "",
 		entry.certificate
-			? `\t\t\t\t\t\t\t<a class="btn btn-secondary btn-card" href="${escapeHtml(entry.certificate)}" target="_blank" rel="noreferrer">View Certificate ↗</a>`
+			? `\t\t\t\t\t\t\t<a class="btn btn-secondary btn-card" href="${escapeHtml(entry.certificate)}" target="_blank" rel="noopener noreferrer">View Certificate ↗</a>`
 			: ""
 	].filter(Boolean).join("\n");
 

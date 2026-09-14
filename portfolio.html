@@ -4,14 +4,59 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta name="description" content="Luis Ressonha is a Software Engineer specializing in Full-Stack development, DevOps, web, mobile, and cloud infrastructure." />
-		<meta name="theme-color" content="#f8fafc" media="(prefers-color-scheme: light)" />
-		<meta name="theme-color" content="#0b0f19" media="(prefers-color-scheme: dark)" />
+		<meta name="theme-color" content="#f8fafc" id="theme-color-meta" />
+		<link rel="canonical" href="https://luisressonha.github.io/portfolio.html" />
 		<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='16' fill='%23eff6ff' stroke='%23bfdbfe' stroke-width='6'/><text x='50' y='50' font-family='monospace' font-weight='700' font-size='40' fill='%232563eb' text-anchor='middle' dominant-baseline='central'>LR</text></svg>" />
 		<meta property="og:title" content="Luis Ressonha | CV &amp; Portfolio" />
 		<meta property="og:description" content="Full-stack developer with 4+ years of experience in Salesforce B2C Commerce, React Native, TypeScript, and Python. Exploring DevOps, Docker, and Azure." />
 		<meta property="og:type" content="website" />
 		<meta property="og:url" content="https://luisressonha.github.io/portfolio.html" />
+		<meta property="og:image" content="https://luisressonha.github.io/assets/og-preview.svg" />
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:title" content="Luis Ressonha | CV &amp; Portfolio" />
+		<meta name="twitter:description" content="Full-stack developer with 4+ years of experience in Salesforce B2C Commerce, React Native, TypeScript, and Python. Exploring DevOps, Docker, and Azure." />
+		<meta name="twitter:image" content="https://luisressonha.github.io/assets/og-preview.svg" />
 		<title>Luis Ressonha | CV &amp; Portfolio</title>
+		<script>
+			(function () {
+				const saved = localStorage.getItem("theme");
+				const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+				if (saved === "dark" || (!saved && prefersDark)) {
+					document.documentElement.classList.add("dark");
+				}
+			})();
+		</script>
+		<script type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@type": "Person",
+			"name": "Luis Ressonha",
+			"jobTitle": "Software Engineer",
+			"url": "https://luisressonha.github.io/portfolio.html",
+			"sameAs": [
+				"https://github.com/LuisRessonha",
+				"https://www.linkedin.com/in/luis-ressonha"
+			],
+			"alumniOf": {
+				"@type": "EducationalOrganization",
+				"name": "University of Évora"
+			},
+			"worksFor": {
+				"@type": "Organization",
+				"name": "Capgemini"
+			},
+			"knowsAbout": [
+				"Salesforce B2C Commerce",
+				"React Native",
+				"TypeScript",
+				"Python",
+				"Full-Stack Development",
+				"DevOps",
+				"Docker",
+				"Azure"
+			]
+		}
+		</script>
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
@@ -59,8 +104,8 @@
 					<h1 class="hero-title">Building cool things &amp; <span>exploring new tech</span>.</h1>
 					<p class="hero-bio">Full-stack developer with 4+ years of experience developing and maintaining production retail, mobile, and web applications using Salesforce B2C Commerce, React Native, TypeScript, and Python. Expanding practice in DevOps, Linux administration, Docker containerization, and Azure cloud technologies.</p>
 					<div class="hero-actions">
-						<a class="btn btn-primary" href="https://github.com/LuisRessonha" target="_blank" rel="noreferrer">View GitHub ↗</a>
-						<a class="btn btn-secondary" href="https://www.linkedin.com/in/luis-ressonha" target="_blank" rel="noreferrer">LinkedIn Profile ↗</a>
+						<a class="btn btn-primary" href="https://github.com/LuisRessonha" target="_blank" rel="noopener noreferrer">View GitHub ↗</a>
+						<a class="btn btn-secondary" href="https://www.linkedin.com/in/luis-ressonha" target="_blank" rel="noopener noreferrer">LinkedIn Profile ↗</a>
 						<a class="btn btn-secondary" href="#experience">Explore Experience ↓</a>
 					</div>
 				</div>
@@ -300,7 +345,7 @@
 						<span class="tag">AI</span>
 						</div>
 						<div class="card-actions">
-							<a class="btn btn-secondary btn-card" href="https://www.udemy.com/course/decodingdevops" target="_blank" rel="noreferrer">View Course ↗</a>
+							<a class="btn btn-secondary btn-card" href="https://www.udemy.com/course/decodingdevops" target="_blank" rel="noopener noreferrer">View Course ↗</a>
 						</div>
 					</div>
 				</article>
@@ -323,7 +368,7 @@
 						<span class="tag">DevOps Roles</span>
 						</div>
 						<div class="card-actions">
-							<a class="btn btn-secondary btn-card" href="https://www.udemy.com/course/the-devops-essentials" target="_blank" rel="noreferrer">View Course ↗</a>
+							<a class="btn btn-secondary btn-card" href="https://www.udemy.com/course/the-devops-essentials" target="_blank" rel="noopener noreferrer">View Course ↗</a>
 						</div>
 					</div>
 				</article>
@@ -347,8 +392,8 @@
 						<span class="tag">Marketing</span>
 						</div>
 						<div class="card-actions">
-							<a class="btn btn-secondary btn-card" href="https://www.udemy.com/course/basics-of-ecommerce-using-salesforce-commerce-cloud" target="_blank" rel="noreferrer">View Course ↗</a>
-							<a class="btn btn-secondary btn-card" href="assets/certificates/basics-of-ecommerce-sfcc.jpg" target="_blank" rel="noreferrer">View Certificate ↗</a>
+							<a class="btn btn-secondary btn-card" href="https://www.udemy.com/course/basics-of-ecommerce-using-salesforce-commerce-cloud" target="_blank" rel="noopener noreferrer">View Course ↗</a>
+							<a class="btn btn-secondary btn-card" href="assets/certificates/basics-of-ecommerce-sfcc.jpg" target="_blank" rel="noopener noreferrer">View Certificate ↗</a>
 						</div>
 					</div>
 				</article>
@@ -371,8 +416,8 @@
 						<span class="tag">Data for AI</span>
 						</div>
 						<div class="card-actions">
-							<a class="btn btn-secondary btn-card" href="https://www.udemy.com/course/salesforce-ai-associate" target="_blank" rel="noreferrer">View Course ↗</a>
-							<a class="btn btn-secondary btn-card" href="assets/certificates/salesforce-certified-ai-associate.jpg" target="_blank" rel="noreferrer">View Certificate ↗</a>
+							<a class="btn btn-secondary btn-card" href="https://www.udemy.com/course/salesforce-ai-associate" target="_blank" rel="noopener noreferrer">View Course ↗</a>
+							<a class="btn btn-secondary btn-card" href="assets/certificates/salesforce-certified-ai-associate.jpg" target="_blank" rel="noopener noreferrer">View Certificate ↗</a>
 						</div>
 					</div>
 				</article>
@@ -395,8 +440,8 @@
 						<span class="tag">Headless APIs</span>
 						</div>
 						<div class="card-actions">
-							<a class="btn btn-secondary btn-card" href="https://www.udemy.com/course/advanced-ecommerce-using-salesforce-commerce-cloud-sfcc" target="_blank" rel="noreferrer">View Course ↗</a>
-							<a class="btn btn-secondary btn-card" href="assets/certificates/advanced-ecommerce-sfcc.jpg" target="_blank" rel="noreferrer">View Certificate ↗</a>
+							<a class="btn btn-secondary btn-card" href="https://www.udemy.com/course/advanced-ecommerce-using-salesforce-commerce-cloud-sfcc" target="_blank" rel="noopener noreferrer">View Course ↗</a>
+							<a class="btn btn-secondary btn-card" href="assets/certificates/advanced-ecommerce-sfcc.jpg" target="_blank" rel="noopener noreferrer">View Certificate ↗</a>
 						</div>
 					</div>
 				</article>
@@ -417,8 +462,8 @@
 						<span class="tag">Penetration Testing</span>
 						</div>
 						<div class="card-actions">
-							<a class="btn btn-secondary btn-card" href="https://www.udemy.com/course/2435072/" target="_blank" rel="noreferrer">View Course ↗</a>
-							<a class="btn btn-secondary btn-card" href="assets/certificates/python-basics.jpg" target="_blank" rel="noreferrer">View Certificate ↗</a>
+							<a class="btn btn-secondary btn-card" href="https://www.udemy.com/course/2435072/" target="_blank" rel="noopener noreferrer">View Course ↗</a>
+							<a class="btn btn-secondary btn-card" href="assets/certificates/python-basics.jpg" target="_blank" rel="noopener noreferrer">View Certificate ↗</a>
 						</div>
 					</div>
 				</article>
@@ -558,11 +603,28 @@
 				</div>
 				<div class="footer-links">
 					<a href="index.html">Home</a>
-					<a href="https://github.com/LuisRessonha" target="_blank" rel="noreferrer">GitHub ↗</a>
-					<a href="https://www.linkedin.com/in/luis-ressonha" target="_blank" rel="noreferrer">LinkedIn ↗</a>
+					<a href="https://github.com/LuisRessonha" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+					<a href="https://www.linkedin.com/in/luis-ressonha" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
 					<a href="#top">Back to top ↑</a>
 				</div>
 			</div>
 		</footer>
+
+		<!-- Certificate Preview Lightbox Modal -->
+		<div id="cert-modal" class="cert-modal" role="dialog" aria-modal="true" aria-labelledby="cert-modal-title" hidden>
+			<div class="cert-modal-backdrop" data-close-modal></div>
+			<div class="cert-modal-dialog">
+				<div class="cert-modal-header">
+					<h3 id="cert-modal-title" class="cert-modal-heading">Certificate Preview</h3>
+					<button type="button" class="cert-modal-close" aria-label="Close certificate preview" data-close-modal>&times;</button>
+				</div>
+				<div class="cert-modal-body">
+					<img id="cert-modal-image" src="" alt="Certificate preview" class="cert-modal-img" />
+				</div>
+				<div class="cert-modal-footer">
+					<a id="cert-modal-download" href="#" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-card">Open Original Image in New Tab ↗</a>
+				</div>
+			</div>
+		</div>
 	</body>
 </html>

@@ -1,0 +1,41 @@
+name: Sync Training and Certifications
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "training-and-certifications.md"
+      - "scripts/sync-training-certifications.js"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sync-certifications:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Run sync script
+        run: node scripts/sync-training-certifications.js
+
+      - name: Commit and push changes if updated
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          if [ -n "$(git status --porcelain portfolio.html)" ]; then
+            git add portfolio.html
+            git commit -m "chore(sync): auto-sync training and certifications to portfolio.html [skip ci]"
+            git push
+          else
+            echo "portfolio.html is already up to date."
+          fi

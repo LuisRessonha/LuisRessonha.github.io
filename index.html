@@ -4,14 +4,28 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta name="description" content="Luis Ressonha is a Software Engineer specializing in Full-Stack development, DevOps, web, mobile, and cloud infrastructure." />
-		<meta name="theme-color" content="#f8fafc" media="(prefers-color-scheme: light)" />
-		<meta name="theme-color" content="#0b0f19" media="(prefers-color-scheme: dark)" />
+		<meta name="theme-color" content="#f8fafc" id="theme-color-meta" />
+		<link rel="canonical" href="https://luisressonha.github.io/" />
 		<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='16' fill='%23eff6ff' stroke='%23bfdbfe' stroke-width='6'/><text x='50' y='50' font-family='monospace' font-weight='700' font-size='40' fill='%232563eb' text-anchor='middle' dominant-baseline='central'>LR</text></svg>" />
 		<meta property="og:title" content="Luis Ressonha | Software Engineer" />
 		<meta property="og:description" content="Software Engineer specializing in full-stack development, DevOps, web, mobile, and cloud infrastructure." />
 		<meta property="og:type" content="website" />
 		<meta property="og:url" content="https://luisressonha.github.io/" />
+		<meta property="og:image" content="https://luisressonha.github.io/assets/og-preview.svg" />
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:title" content="Luis Ressonha | Software Engineer" />
+		<meta name="twitter:description" content="Software Engineer specializing in full-stack development, DevOps, web, mobile, and cloud infrastructure." />
+		<meta name="twitter:image" content="https://luisressonha.github.io/assets/og-preview.svg" />
 		<title>Luis Ressonha | Software Engineer</title>
+		<script>
+			(function () {
+				const saved = localStorage.getItem("theme");
+				const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+				if (saved === "dark" || (!saved && prefersDark)) {
+					document.documentElement.classList.add("dark");
+				}
+			})();
+		</script>
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
@@ -24,15 +38,16 @@
 
 		<header class="site-header">
 			<div class="header-container">
-				<a class="brand" href="portfolio.html" aria-label="Luis Ressonha home">
+				<a class="brand" href="index.html" aria-label="Luis Ressonha home">
 					<span class="brand-badge">LR</span>
 					<span>Luis Ressonha</span>
 				</a>
 				<div class="header-right">
 					<nav class="main-nav" id="main-nav" aria-label="Main navigation">
+						<a href="index.html">Home</a>
 						<a href="portfolio.html">Portfolio</a>
-						<a href="https://github.com/LuisRessonha" target="_blank" rel="noreferrer">GitHub ↗</a>
-						<a href="https://www.linkedin.com/in/luis-ressonha" target="_blank" rel="noreferrer">LinkedIn ↗</a>
+						<a href="https://github.com/LuisRessonha" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+						<a href="https://www.linkedin.com/in/luis-ressonha" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
 					</nav>
 					<button class="theme-toggle" type="button" aria-label="Switch to dark mode" aria-pressed="false">
 						<span aria-hidden="true">🌙</span>
@@ -57,8 +72,8 @@
 					</div>
 					<div class="hero-actions">
 						<a class="btn btn-primary" href="portfolio.html">View Portfolio ↗</a>
-						<a class="btn btn-secondary" href="https://github.com/LuisRessonha" target="_blank" rel="noreferrer">GitHub ↗</a>
-						<a class="btn btn-secondary" href="https://www.linkedin.com/in/luis-ressonha" target="_blank" rel="noreferrer">LinkedIn ↗</a>
+						<a class="btn btn-secondary" href="https://github.com/LuisRessonha" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+						<a class="btn btn-secondary" href="https://www.linkedin.com/in/luis-ressonha" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
 					</div>
 				</div>
 
@@ -88,11 +103,11 @@
 						</div>
 						<div class="code-line">
 							<span class="code-key">"github":</span>
-							<span class="code-string">"<a href="https://github.com/LuisRessonha" target="_blank" rel="noreferrer" style="text-decoration: underline; color: var(--primary)">@LuisRessonha</a>"</span>,
+							<span class="code-string">"<a href="https://github.com/LuisRessonha" target="_blank" rel="noopener noreferrer" style="text-decoration: underline; color: var(--primary)">@LuisRessonha</a>"</span>,
 						</div>
 						<div class="code-line">
 							<span class="code-key">"linkedin":</span>
-							<span class="code-string">"<a href="https://www.linkedin.com/in/luis-ressonha" target="_blank" rel="noreferrer" style="text-decoration: underline; color: var(--primary)">in/luis-ressonha</a>"</span>
+							<span class="code-string">"<a href="https://www.linkedin.com/in/luis-ressonha" target="_blank" rel="noopener noreferrer" style="text-decoration: underline; color: var(--primary)">in/luis-ressonha</a>"</span>
 						</div>
 					</div>
 				</div>
@@ -106,9 +121,10 @@
 					<span class="footer-note">Built with coffee, code, and a touch of AI</span>
 				</div>
 				<div class="footer-links">
+					<a href="index.html">Home</a>
 					<a href="portfolio.html">Portfolio</a>
-					<a href="https://github.com/LuisRessonha" target="_blank" rel="noreferrer">GitHub ↗</a>
-					<a href="https://www.linkedin.com/in/luis-ressonha" target="_blank" rel="noreferrer">LinkedIn ↗</a>
+					<a href="https://github.com/LuisRessonha" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+					<a href="https://www.linkedin.com/in/luis-ressonha" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
 				</div>
 			</div>
 		</footer>

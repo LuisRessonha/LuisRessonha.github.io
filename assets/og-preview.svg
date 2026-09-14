@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" fill="none">
+  <rect width="1200" height="630" fill="#0b0f19"/>
+  <defs>
+    <radialGradient id="glow" cx="0.5" cy="0.4" r="0.6" fx="0.5" fy="0.3">
+      <stop offset="0%" stop-color="#2563eb" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#0b0f19" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="badge-grad" x1="0" y1="0" x2="100" y2="100" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1d4ed8"/>
+      <stop offset="1" stop-color="#38bdf8"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background radial ambient light -->
+  <rect width="1200" height="630" fill="url(#glow)"/>
+
+  <!-- Border outline -->
+  <rect x="24" y="24" width="1152" height="582" rx="20" stroke="#1f2937" stroke-width="2"/>
+
+  <!-- Brand badge -->
+  <g transform="translate(100, 100)">
+    <rect width="72" height="72" rx="16" fill="#0f2d4a" stroke="#38bdf8" stroke-width="3"/>
+    <text x="36" y="38" font-family="'DM Mono', monospace, Consolas" font-size="30" font-weight="700" fill="#38bdf8" text-anchor="middle" dominant-baseline="central">LR</text>
+  </g>
+
+  <!-- Name & Title -->
+  <text x="195" y="145" font-family="'Inter', -apple-system, sans-serif" font-size="34" font-weight="700" fill="#f8fafc">Luis Ressonha</text>
+
+  <!-- Main Headline -->
+  <text x="100" y="270" font-family="'Inter', -apple-system, sans-serif" font-size="52" font-weight="800" fill="#ffffff" letter-spacing="-1">Software Engineer</text>
+  <text x="100" y="335" font-family="'Inter', -apple-system, sans-serif" font-size="38" font-weight="600" fill="#38bdf8">Full-Stack · Web · Mobile · DevOps</text>
+
+  <!-- Bio / Summary -->
+  <text x="100" y="405" font-family="'Inter', -apple-system, sans-serif" font-size="22" font-weight="400" fill="#94a3b8">
+    Building production retail, mobile, and web applications.
+  </text>
+  <text x="100" y="440" font-family="'Inter', -apple-system, sans-serif" font-size="22" font-weight="400" fill="#94a3b8">
+    Salesforce B2C Commerce · React Native · TypeScript · Python · Docker · Azure
+  </text>
+
+  <!-- Footer status & domain -->
+  <g transform="translate(100, 520)">
+    <circle cx="10" cy="10" r="7" fill="#22c55e"/>
+    <text x="30" y="16" font-family="'DM Mono', monospace, Consolas" font-size="20" font-weight="500" fill="#cbd5e1">luisressonha.github.io</text>
+  </g>
+</svg>

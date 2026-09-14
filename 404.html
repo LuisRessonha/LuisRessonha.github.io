@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="description" content="Page not found — Luis Ressonha | Software Engineer" />
+		<meta name="theme-color" content="#f8fafc" id="theme-color-meta" />
+		<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='16' fill='%23eff6ff' stroke='%23bfdbfe' stroke-width='6'/><text x='50' y='50' font-family='monospace' font-weight='700' font-size='40' fill='%232563eb' text-anchor='middle' dominant-baseline='central'>LR</text></svg>" />
+		<title>404: Page Not Found | Luis Ressonha</title>
+		<script>
+			(function () {
+				const saved = localStorage.getItem("theme");
+				const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+				if (saved === "dark" || (!saved && prefersDark)) {
+					document.documentElement.classList.add("dark");
+				}
+			})();
+		</script>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+		<link rel="stylesheet" href="css/styles.css" />
+		<script src="js/script.js" defer></script>
+	</head>
+
+	<body>
+		<a class="skip-link" href="#main-content">Skip to content</a>
+
+		<header class="site-header">
+			<div class="header-container">
+				<a class="brand" href="index.html" aria-label="Luis Ressonha home">
+					<span class="brand-badge">LR</span>
+					<span>Luis Ressonha</span>
+				</a>
+				<div class="header-right">
+					<nav class="main-nav" id="main-nav" aria-label="Main navigation">
+						<a href="index.html">Home</a>
+						<a href="portfolio.html">Portfolio</a>
+						<a href="https://github.com/LuisRessonha" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+						<a href="https://www.linkedin.com/in/luis-ressonha" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+					</nav>
+					<button class="theme-toggle" type="button" aria-label="Switch to dark mode" aria-pressed="false">
+						<span aria-hidden="true">🌙</span>
+					</button>
+					<button class="nav-toggle" type="button" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="main-nav">
+						<span class="hamburger-bar"></span>
+						<span class="hamburger-bar"></span>
+						<span class="hamburger-bar"></span>
+					</button>
+				</div>
+			</div>
+		</header>
+
+		<main id="main-content" class="container">
+			<section class="error-section">
+				<div class="error-code">404</div>
+				<h1 class="error-title">Page Not Found</h1>
+				<p class="error-description">The page you were looking for doesn't exist, has been moved, or the link may be outdated.</p>
+				<div class="hero-actions">
+					<a class="btn btn-primary" href="index.html">← Back to Home</a>
+					<a class="btn btn-secondary" href="portfolio.html">View Portfolio ↗</a>
+				</div>
+			</section>
+		</main>
+
+		<footer class="site-footer">
+			<div class="footer-container">
+				<div>© <span id="year"></span> Luis Ressonha · Software Engineer</div>
+				<div>
+					<span class="footer-note">Built with coffee, code, and a touch of AI</span>
+				</div>
+				<div class="footer-links">
+					<a href="index.html">Home</a>
+					<a href="portfolio.html">Portfolio</a>
+					<a href="https://github.com/LuisRessonha" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+					<a href="https://www.linkedin.com/in/luis-ressonha" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+				</div>
+			</div>
+		</footer>
+	</body>
+</html>

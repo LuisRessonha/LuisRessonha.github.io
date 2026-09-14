@@ -144,8 +144,11 @@ body.dark .site-header {
 }
 
 .main-nav a:hover,
-.main-nav a:focus-visible {
+.main-nav a:focus-visible,
+.main-nav a[aria-current="page"],
+.main-nav a.is-active {
 	color: var(--primary);
+	font-weight: 600;
 }
 
 .theme-toggle {
@@ -795,5 +798,210 @@ body.dark .site-header {
 
 .mt-sm {
 	margin-top: 0.5rem;
+}
+
+/* 404 Page Styling */
+.error-section {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	min-height: 55vh;
+	padding: 4rem 1rem;
+}
+
+.error-code {
+	font-family: var(--font-mono);
+	font-size: clamp(4rem, 15vw, 7rem);
+	font-weight: 800;
+	color: var(--primary);
+	line-height: 1;
+	margin-bottom: 1rem;
+	letter-spacing: -0.05em;
+}
+
+.error-title {
+	font-size: clamp(1.5rem, 5vw, 2.25rem);
+	font-weight: 700;
+	margin-bottom: 1rem;
+	color: var(--text);
+}
+
+.error-description {
+	color: var(--text-muted);
+	max-width: 480px;
+	margin-bottom: 2rem;
+	font-size: 1.05rem;
+}
+
+/* Certificate Lightbox Modal */
+.cert-modal {
+	position: fixed;
+	inset: 0;
+	z-index: 200;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 1rem;
+	opacity: 0;
+	pointer-events: none;
+	transition: opacity 0.2s ease;
+}
+
+.cert-modal[hidden] {
+	display: none;
+}
+
+.cert-modal.is-open {
+	opacity: 1;
+	pointer-events: auto;
+}
+
+.cert-modal-backdrop {
+	position: absolute;
+	inset: 0;
+	background: rgba(11, 15, 25, 0.75);
+	backdrop-filter: blur(6px);
+	-webkit-backdrop-filter: blur(6px);
+}
+
+.cert-modal-dialog {
+	position: relative;
+	z-index: 1;
+	background: var(--surface);
+	border: 1px solid var(--border);
+	border-radius: var(--radius);
+	box-shadow: var(--shadow-md);
+	max-width: 900px;
+	width: 100%;
+	max-height: 90vh;
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+	transform: scale(0.96);
+	transition: transform 0.2s ease;
+}
+
+.cert-modal.is-open .cert-modal-dialog {
+	transform: scale(1);
+}
+
+.cert-modal-header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 1rem 1.25rem;
+	border-bottom: 1px solid var(--border);
+}
+
+.cert-modal-heading {
+	font-size: 1.05rem;
+	font-weight: 600;
+	color: var(--text);
+}
+
+.cert-modal-close {
+	background: transparent;
+	border: none;
+	color: var(--text-muted);
+	font-size: 1.75rem;
+	line-height: 1;
+	cursor: pointer;
+	padding: 0.2rem 0.5rem;
+	border-radius: var(--radius-sm);
+	transition: color 0.15s ease, background-color 0.15s ease;
+}
+
+.cert-modal-close:hover,
+.cert-modal-close:focus-visible {
+	color: var(--text);
+	background: var(--surface-muted);
+}
+
+.cert-modal-body {
+	flex: 1;
+	overflow: auto;
+	padding: 1.25rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: var(--surface-muted);
+}
+
+.cert-modal-img {
+	max-width: 100%;
+	max-height: 65vh;
+	object-fit: contain;
+	border-radius: var(--radius-sm);
+	box-shadow: var(--shadow-md);
+}
+
+.cert-modal-footer {
+	padding: 0.85rem 1.25rem;
+	border-top: 1px solid var(--border);
+	display: flex;
+	justify-content: flex-end;
+	background: var(--surface);
+}
+
+.cert-modal-footer .btn-card {
+	width: auto;
+}
+
+/* Print Stylesheet (Ctrl/Cmd + P / Save as PDF) */
+@media print {
+	body {
+		background: #ffffff !important;
+		color: #111827 !important;
+		font-size: 11pt;
+	}
+
+	.site-header,
+	.site-footer,
+	.theme-toggle,
+	.nav-toggle,
+	.skip-link,
+	.hero-actions,
+	.card-actions,
+	.status-badge,
+	.cert-modal {
+		display: none !important;
+	}
+
+	.container {
+		max-width: 100% !important;
+		padding: 0 !important;
+	}
+
+	.hero {
+		padding: 1rem 0 !important;
+		grid-template-columns: 1fr !important;
+	}
+
+	.dev-card {
+		display: none !important;
+	}
+
+	.section {
+		padding: 1.5rem 0 !important;
+		page-break-inside: avoid;
+		break-inside: avoid;
+	}
+
+	.timeline-item,
+	.project-card,
+	.skill-card {
+		box-shadow: none !important;
+		border: 1px solid #d1d5db !important;
+		background: #ffffff !important;
+		page-break-inside: avoid;
+		break-inside: avoid;
+	}
+
+	a {
+		text-decoration: none !important;
+		color: inherit !important;
+	}
 }
 
