@@ -59,6 +59,7 @@ When adding or updating an entry, edit this file and run `node scripts/sync-trai
 
 - **Provider:** Udemy
 - **Completed:** June 2020
-- **Description:** Core Python programming concepts, syntax, data structures, algorithms, and script development.
-- **Topics:** Python, Programming
+- **URL:** https://www.udemy.com/course/2435072/
+- **Description:** Python fundamentals focused on building the programming knowledge needed for penetration testing.
+- **Topics:** Python, Programming, Penetration Testing
 - **Certificate:** `assets/certificates/PythonBasics.jpg`
