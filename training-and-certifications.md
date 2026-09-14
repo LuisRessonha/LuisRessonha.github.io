@@ -6,54 +6,59 @@ When adding or updating an entry, edit this file and run `node scripts/sync-trai
 
 ## Ongoing Training
 
-### Decoding DevOps - From Basics to Advanced
+### Decoding DevOps - From Basics to Advanced Projects with AI
+
 - **Provider:** Udemy
 - **Status:** Ongoing
 - **Year:** 2026
 - **URL:** https://www.udemy.com/course/decodingdevops
-- **Description:** In-depth DevOps engineering course covering Linux administration, Docker containerization, CI/CD pipelines, and cloud architecture.
-- **Topics:** DevOps, Docker, Linux, CI/CD
+- **Description:** Comprehensive DevOps course covering Linux and server management, networking, AI-assisted scripting, AWS cloud services, build and test automation, CI/CD, Terraform, Ansible, monitoring and observability, Docker, Kubernetes, and GitOps with GitHub Actions, Helm, and ArgoCD.
+- **Topics:** DevOps, Linux, AWS, CI/CD, Terraform, Ansible, Docker, Kubernetes, GitOps, AI
+- **Certificate:** Not available yet
+
+### The DevOps Essentials - The Handbook
+
+- **Provider:** Udemy
+- **Status:** Ongoing
+- **Year:** 2026
+- **URL:** https://www.udemy.com/course/the-devops-essentials
+- **Description:** DevOps fundamentals course covering DevOps practices, terminology, history, roles, continuous integration and delivery, and the responsibilities of DevOps teams and facilitators.
+- **Topics:** DevOps, DevOps Culture, CI/CD, Automation, DevOps Roles
 - **Certificate:** Not available yet
 
 ## Completed Training and Certifications
 
-### Basics of Ecommerce - Salesforce Commerce Cloud
+### Basics of Ecommerce - Using Salesforce Commerce Cloud
+
 - **Provider:** Udemy
 - **Completed:** September 2026
-- **Description:** Core principles of B2C e-commerce stores using Salesforce Commerce Cloud (SFCC) architecture and Business Manager.
-- **Topics:** Salesforce B2C, SFCC, E-Commerce
+- **URL:** https://www.udemy.com/course/basics-of-ecommerce-using-salesforce-commerce-cloud
+- **Description:** Ecommerce fundamentals taught through real-life examples, end-to-end flows, upstream and downstream system integrations, ecommerce architectures, and Salesforce Commerce Cloud modules including catalog, orders, user management, and marketing.
+- **Topics:** E-Commerce, Salesforce Commerce Cloud, Ecommerce Architecture, Catalog, Orders, Marketing
 - **Certificate:** `assets/certificates/Basics of Ecommerce - Using Salesforce Commerce Cloud.jpg`
 
 ### Salesforce Certified AI Associate Exam Course
+
 - **Provider:** Udemy
 - **Completed:** November 2025
-- **Description:** AI concepts, ethical AI practices, data quality, and Salesforce Einstein AI fundamentals.
-- **Topics:** Salesforce AI, Artificial Intelligence, Einstein AI
+- **URL:** https://www.udemy.com/course/salesforce-ai-associate
+- **Description:** Preparation for the Salesforce AI Associate certification covering Salesforce's five Trusted AI Principles, AI fundamentals, CRM applications, ethical considerations, data for AI, and the core certification topics.
+- **Topics:** Salesforce AI, Artificial Intelligence, Trusted AI Principles, CRM, Data for AI
 - **Certificate:** `assets/certificates/The Complete Salesforce Certified AI Associate Exam Course.jpg`
 
-### Advanced Ecommerce Using Salesforce Commerce Cloud
+### Advanced Ecommerce Using Salesforce Commerce Cloud - SFCC
+
 - **Provider:** Udemy
 - **Completed:** November 2025
-- **Description:** Advanced SFCC customization, Storefront Reference Architecture (SFRA), server-side scripts, cartridges, and complex e-commerce workflows.
-- **Topics:** Salesforce B2C, SFRA, Cartridges
+- **URL:** https://www.udemy.com/course/advanced-ecommerce-using-salesforce-commerce-cloud-sfcc
+- **Description:** Advanced Salesforce Commerce Cloud B2C development covering platform extension and customization, SFRA, OCAPI, headless APIs, current SFCC architectures and frameworks, practical demos, and developer certification topics.
+- **Topics:** Salesforce B2C, SFCC, SFRA, OCAPI, Headless APIs
 - **Certificate:** `assets/certificates/Advanced Ecommerce Using Salesforce Commerce Cloud - SFCC.jpg`
 
 ### Python Basics
+
 - **Provider:** Udemy
 - **Completed:** June 2020
 - **Description:** Core Python programming concepts, syntax, data structures, algorithms, and script development.
 - **Topics:** Python, Programming
 - **Certificate:** `assets/certificates/PythonBasics.jpg`
-
-## New Entry Template
-
-Copy this block when adding a new training course or certification. Move it to the appropriate section and remove fields that do not apply.
-
-### Name of training or certification
-- **Provider:**
-- **Status:** Ongoing / Completed
-- **Completed:** Month Year
-- **Description:**
-- **Topics:**
-- **URL:** https://example.com/course
-- **Certificate:** `assets/certificates/file-name.ext`
