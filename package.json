@@ -1,0 +1,11 @@
+{
+  "name": "luisressonha-github-io",
+  "private": true,
+  "description": "Personal portfolio and GitHub Pages site for Luis Ressonha.",
+  "scripts": {
+    "sync": "node scripts/sync-training-certifications.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

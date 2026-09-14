@@ -65,3 +65,14 @@ const yearEl = document.querySelector("#year");
 if (yearEl) {
 	yearEl.textContent = new Date().getFullYear();
 }
+
+/* Active Nav Link (aria-current) */
+const currentPage = window.location.pathname.split("/").pop() || "index.html";
+document.querySelectorAll(".main-nav a").forEach((link) => {
+	const href = link.getAttribute("href");
+	if (href && !href.startsWith("#") && !href.startsWith("http")) {
+		if (href === currentPage) {
+			link.setAttribute("aria-current", "page");
+		}
+	}
+});

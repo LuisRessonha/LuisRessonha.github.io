@@ -1,6 +1,11 @@
 const fs = require("fs");
 const path = require("path");
 
+// Node.js build script — reads training-and-certifications.md and injects the
+// rendered HTML cards into the marked block in portfolio.html.
+// Run from the repository root: node scripts/sync-training-certifications.js
+// Or via npm: npm run sync
+
 const repositoryRoot = path.resolve(__dirname, "..");
 const markdownPath = path.join(repositoryRoot, "training-and-certifications.md");
 const htmlPath = path.join(repositoryRoot, "portfolio.html");
@@ -13,6 +18,10 @@ function escapeHtml(value) {
 		.replace(/</g, "&lt;")
 		.replace(/>/g, "&gt;")
 		.replace(/"/g, "&quot;");
+}
+
+function escapeRegExp(str) {
+	return str.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 }
 
 function parseEntries(markdown) {
@@ -59,32 +68,37 @@ function parseEntries(markdown) {
 
 function renderEntry(entry) {
 	const topics = entry.topics
-		.map((topic, index) => `<span class="tag${index === 0 ? " tag-primary" : ""}">${escapeHtml(topic)}</span>`)
-		.join("\n\t\t\t\t\t\t\t");
-	const certificate = [
+		.map((topic, index) => `\t\t\t\t\t\t<span class="tag${index === 0 ? " tag-primary" : ""}">${escapeHtml(topic)}</span>`)
+		.join("\n");
+
+	const actions = [
 		entry.url
-			? `<a class="btn btn-secondary" href="${escapeHtml(entry.url)}" target="_blank" rel="noreferrer" style="font-size: 0.8rem; padding: 0.4rem 0.84rem; width: 100%; justify-content: center">View Course ↗</a>`
+			? `\t\t\t\t\t\t\t<a class="btn btn-secondary btn-card" href="${escapeHtml(entry.url)}" target="_blank" rel="noreferrer">View Course ↗</a>`
 			: "",
 		entry.certificate
-			? `<a class="btn btn-secondary" href="${escapeHtml(entry.certificate)}" target="_blank" rel="noreferrer" style="font-size: 0.8rem; padding: 0.4rem 0.84rem; width: 100%; justify-content: center">View Certificate ↗</a>`
+			? `\t\t\t\t\t\t\t<a class="btn btn-secondary btn-card" href="${escapeHtml(entry.certificate)}" target="_blank" rel="noreferrer">View Certificate ↗</a>`
 			: ""
-	].filter(Boolean).join("\n\t\t\t\t\t\t\t");
+	].filter(Boolean).join("\n");
 
-	return `\t\t\t\t\t<article class="project-card">
-\t\t\t\t\t\t<div>
-\t\t\t\t\t\t\t<div class="timeline-header" style="margin-bottom: 0.5rem">
-\t\t\t\t\t\t\t\t<h3 style="font-size: 1.05rem; margin-bottom: 0">${escapeHtml(entry.title)}</h3>
-\t\t\t\t\t\t\t\t<span class="period-badge">${escapeHtml(entry.period)}</span>
-\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t<div class="company-name" style="font-size: 0.85rem; margin-bottom: 0.75rem">${escapeHtml(entry.provider)}</div>
-\t\t\t\t\t\t\t<p>${escapeHtml(entry.description)}</p>
+	const actionsBlock = actions
+		? `\n\t\t\t\t\t\t<div class="card-actions">\n${actions}\n\t\t\t\t\t\t</div>`
+		: "";
+
+	return `\t\t\t\t<article class="project-card">
+\t\t\t\t\t<div>
+\t\t\t\t\t\t<div class="timeline-header card-timeline-header">
+\t\t\t\t\t\t\t<h3 class="card-title">${escapeHtml(entry.title)}</h3>
+\t\t\t\t\t\t\t<span class="period-badge">${escapeHtml(entry.period)}</span>
 \t\t\t\t\t\t</div>
-\t\t\t\t\t\t<div>
-\t\t\t\t\t\t\t<div class="tech-tags" style="margin-bottom: 0.85rem">
-\t\t\t\t\t\t\t\t${topics}
-\t\t\t\t\t\t\t</div>${certificate}
-\t\t\t\t\t\t</div>
-\t\t\t\t\t</article>`;
+\t\t\t\t\t\t<div class="company-name card-provider">${escapeHtml(entry.provider)}</div>
+\t\t\t\t\t\t<p>${escapeHtml(entry.description)}</p>
+\t\t\t\t\t</div>
+\t\t\t\t\t<div>
+\t\t\t\t\t\t<div class="tech-tags card-tags">
+${topics}
+\t\t\t\t\t\t</div>${actionsBlock}
+\t\t\t\t\t</div>
+\t\t\t\t</article>`;
 }
 
 const markdown = fs.readFileSync(markdownPath, "utf8");
@@ -92,7 +106,7 @@ const html = fs.readFileSync(htmlPath, "utf8");
 const entries = parseEntries(markdown);
 const generatedCards = entries.map(renderEntry).join("\n\n");
 const markedBlock = `${startMarker}\n${generatedCards}\n\t\t\t\t${endMarker}`;
-const markerPattern = new RegExp(`${startMarker}[\\s\\S]*?${endMarker}`);
+const markerPattern = new RegExp(`${escapeRegExp(startMarker)}[\\s\\S]*?${escapeRegExp(endMarker)}`);
 
 if (!markerPattern.test(html)) {
 	throw new Error(`Could not find the marked certifications block in ${htmlPath}`);

@@ -264,12 +264,12 @@ body.dark .site-header {
 .hero-bio {
 	font-size: 1.05rem;
 	color: var(--text-muted);
-	/* max-width: 540px; */
+
 	line-height: 1.6;
 	margin-bottom: 2rem;
 
 	display: flex;
-    flex-direction: column;
+	flex-direction: column;
 	gap: 0.5rem;
 }
 
@@ -758,5 +758,42 @@ body.dark .site-header {
 		width: 100%;
 		justify-content: center;
 	}
+}
+
+/* Card utility classes (shared between static HTML and sync script output) */
+.card-timeline-header {
+	margin-bottom: 0.5rem;
+}
+
+.card-title {
+	font-size: 1.05rem;
+	margin-bottom: 0;
+}
+
+.card-provider {
+	font-size: 0.85rem;
+	margin-bottom: 0.75rem;
+}
+
+.card-tags {
+	margin-bottom: 0.5rem;
+}
+
+.btn-card {
+	font-size: 0.8rem;
+	padding: 0.4rem 0.84rem;
+	width: 100%;
+	justify-content: center;
+}
+
+.card-actions {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+	margin-top: 0.5rem;
+}
+
+.mt-sm {
+	margin-top: 0.5rem;
 }
 

@@ -35,7 +35,7 @@ When adding or updating an entry, edit this file and run `node scripts/sync-trai
 - **URL:** https://www.udemy.com/course/basics-of-ecommerce-using-salesforce-commerce-cloud
 - **Description:** Ecommerce fundamentals taught through real-life examples, end-to-end flows, upstream and downstream system integrations, ecommerce architectures, and Salesforce Commerce Cloud modules including catalog, orders, user management, and marketing.
 - **Topics:** E-Commerce, Salesforce Commerce Cloud, Ecommerce Architecture, Catalog, Orders, Marketing
-- **Certificate:** `assets/certificates/Basics of Ecommerce - Using Salesforce Commerce Cloud.jpg`
+- **Certificate:** `assets/certificates/basics-of-ecommerce-sfcc.jpg`
 
 ### Salesforce Certified AI Associate Exam Course
 
@@ -44,7 +44,7 @@ When adding or updating an entry, edit this file and run `node scripts/sync-trai
 - **URL:** https://www.udemy.com/course/salesforce-ai-associate
 - **Description:** Preparation for the Salesforce AI Associate certification covering Salesforce's five Trusted AI Principles, AI fundamentals, CRM applications, ethical considerations, data for AI, and the core certification topics.
 - **Topics:** Salesforce AI, Artificial Intelligence, Trusted AI Principles, CRM, Data for AI
-- **Certificate:** `assets/certificates/The Complete Salesforce Certified AI Associate Exam Course.jpg`
+- **Certificate:** `assets/certificates/salesforce-certified-ai-associate.jpg`
 
 ### Advanced Ecommerce Using Salesforce Commerce Cloud - SFCC
 
@@ -53,7 +53,7 @@ When adding or updating an entry, edit this file and run `node scripts/sync-trai
 - **URL:** https://www.udemy.com/course/advanced-ecommerce-using-salesforce-commerce-cloud-sfcc
 - **Description:** Advanced Salesforce Commerce Cloud B2C development covering platform extension and customization, SFRA, OCAPI, headless APIs, current SFCC architectures and frameworks, practical demos, and developer certification topics.
 - **Topics:** Salesforce B2C, SFCC, SFRA, OCAPI, Headless APIs
-- **Certificate:** `assets/certificates/Advanced Ecommerce Using Salesforce Commerce Cloud - SFCC.jpg`
+- **Certificate:** `assets/certificates/advanced-ecommerce-sfcc.jpg`
 
 ### Python Basics
 
@@ -62,4 +62,4 @@ When adding or updating an entry, edit this file and run `node scripts/sync-trai
 - **URL:** https://www.udemy.com/course/2435072/
 - **Description:** Python fundamentals focused on building the programming knowledge needed for penetration testing.
 - **Topics:** Python, Programming, Penetration Testing
-- **Certificate:** `assets/certificates/PythonBasics.jpg`
+- **Certificate:** `assets/certificates/python-basics.jpg`
