@@ -16,17 +16,16 @@ When adding or updating an entry, edit this file and run `node scripts/sync-trai
 - **Topics:** DevOps, Linux, AWS, CI/CD, Terraform, Ansible, Docker, Kubernetes, GitOps, AI
 - **Certificate:** Not available yet
 
+## Completed Training and Certifications
+
 ### The DevOps Essentials - The Handbook
 
 - **Provider:** Udemy
-- **Status:** Ongoing
-- **Year:** 2026
+- **Completed:** September 2026
 - **URL:** https://www.udemy.com/course/the-devops-essentials
 - **Description:** DevOps fundamentals course covering DevOps practices, terminology, history, roles, continuous integration and delivery, and the responsibilities of DevOps teams and facilitators.
 - **Topics:** DevOps, DevOps Culture, CI/CD, Automation, DevOps Roles
-- **Certificate:** Not available yet
-
-## Completed Training and Certifications
+- **Certificate:** `assets/certificates/the-devops-essentials-the-handbook.jpg`
 
 ### Basics of Ecommerce - Using Salesforce Commerce Cloud
 
